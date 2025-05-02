@@ -14,6 +14,6 @@ Newspaper = st.number_input('Newspaper Advertising Budget', min_value=0.0)
 
 # Make prediction
 if st.button('Predict Sales'):
-    input_data = np.array([[TV, Radio, Newspaper]])
+    input_data = np.array([[Location, Fuel_Type, Owner_Type, Transmission, Manufacturer]])
     prediction = model.predict(input_data)[0]
     st.success(f'Predicted Sales: {prediction:.2f}')
